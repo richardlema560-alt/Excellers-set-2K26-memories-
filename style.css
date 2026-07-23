@@ -1,0 +1,273 @@
+/* ==========================================
+   EXCELLERS SET 2026 MEMORIES
+   Modern Memory Vault Theme
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#fff;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url("images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    animation:zoomBackground 20s infinite alternate;
+}
+
+@keyframes zoomBackground{
+    from{
+        background-size:100%;
+    }
+    to{
+        background-size:110%;
+    }
+}
+
+/* Navigation */
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(12px);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00c3ff;
+}
+
+/* Headings */
+
+h1{
+    font-size:55px;
+    text-align:center;
+    margin-top:70px;
+    text-shadow:0 0 20px #000;
+}
+
+h2{
+    margin-top:50px;
+    margin-bottom:15px;
+    color:#00c3ff;
+    text-align:center;
+    font-size:32px;
+}
+
+p{
+    text-align:center;
+    max-width:850px;
+    margin:15px auto;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Buttons */
+
+button{
+    display:block;
+    margin:25px auto;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:#00c3ff;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#008ec5;
+    transform:scale(1.08);
+}
+
+/* Sections */
+
+section{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    padding:30px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+/* Images */
+
+img{
+    width:100%;
+    border-radius:18px;
+    transition:.4s;
+}
+
+img:hover{
+    transform:scale(1.04);
+    box-shadow:0 0 25px rgba(0,195,255,.7);
+}
+
+/* Videos */
+
+video{
+    width:100%;
+    border-radius:18px;
+    margin-top:15px;
+    transition:.4s;
+}
+
+video:hover{
+    transform:scale(1.02);
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* Forms */
+
+form{
+    width:90%;
+    max-width:650px;
+    margin:40px auto;
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:20px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    border-radius:10px;
+    background:#1d1d1d;
+    color:white;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline:2px solid #00c3ff;
+}
+
+/* Cards */
+
+.card{
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(0,195,255,.5);
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:35px;
+    background:rgba(0,0,0,.7);
+    margin-top:60px;
+    color:#bbb;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00c3ff;
+    border-radius:10px;
+}
+
+/* Fade Animation */
+
+.fade{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+nav{
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+h1{
+    font-size:36px;
+    padding:0 15px;
+}
+
+h2{
+    font-size:26px;
+}
+
+p{
+    font-size:16px;
+    padding:0 15px;
+}
+
+button{
+    width:85%;
+}
+
+section{
+    width:95%;
+}
+
+.gallery{
+    grid-template-columns:1fr;
+}
+
+}
