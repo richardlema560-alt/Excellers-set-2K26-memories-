@@ -1,273 +1,40 @@
-/* ==========================================
+    /* ===========================
    EXCELLERS SET 2026 MEMORIES
-   Modern Memory Vault Theme
-========================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#fff;
-    background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-    url("images/background.jpg");
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    animation:zoomBackground 20s infinite alternate;
-}
-
-@keyframes zoomBackground{
-    from{
-        background-size:100%;
-    }
-    to{
-        background-size:110%;
-    }
-}
-
-/* Navigation */
-
-nav{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    padding:20px;
-    background:rgba(0,0,0,.55);
-    backdrop-filter:blur(12px);
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#00c3ff;
-}
-
-/* Headings */
-
-h1{
-    font-size:55px;
-    text-align:center;
-    margin-top:70px;
-    text-shadow:0 0 20px #000;
-}
-
-h2{
-    margin-top:50px;
-    margin-bottom:15px;
-    color:#00c3ff;
-    text-align:center;
-    font-size:32px;
-}
-
-p{
-    text-align:center;
-    max-width:850px;
-    margin:15px auto;
-    line-height:1.8;
-    font-size:18px;
-}
-
-/* Buttons */
-
-button{
-    display:block;
-    margin:25px auto;
-    padding:15px 40px;
-    border:none;
-    border-radius:50px;
-    background:#00c3ff;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    background:#008ec5;
-    transform:scale(1.08);
-}
-
-/* Sections */
-
-section{
-    width:90%;
-    max-width:1200px;
-    margin:60px auto;
-    padding:30px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(12px);
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,.15);
-}
-
-/* Images */
-
-img{
-    width:100%;
-    border-radius:18px;
-    transition:.4s;
-}
-
-img:hover{
-    transform:scale(1.04);
-    box-shadow:0 0 25px rgba(0,195,255,.7);
-}
-
-/* Videos */
-
-video{
-    width:100%;
-    border-radius:18px;
-    margin-top:15px;
-    transition:.4s;
-}
-
-video:hover{
-    transform:scale(1.02);
-}
-
-/* Gallery */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-/* Forms */
-
-form{
-    width:90%;
-    max-width:650px;
-    margin:40px auto;
-    background:rgba(255,255,255,.08);
-    padding:30px;
-    border-radius:20px;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:15px;
-    margin:12px 0;
-    border:none;
-    border-radius:10px;
-    background:#1d1d1d;
-    color:white;
-}
-
-input:focus,
-textarea:focus,
-select:focus{
-    outline:2px solid #00c3ff;
-}
-
-/* Cards */
-
-.card{
-    background:rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:20px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(0,195,255,.5);
-}
-
-/* Footer */
-
-footer{
-    text-align:center;
-    padding:35px;
-    background:rgba(0,0,0,.7);
-    margin-top:60px;
-    color:#bbb;
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#00c3ff;
-    border-radius:10px;
-}
-
-/* Fade Animation */
-
-.fade{
-    animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* Mobile */
-
+   Made with ♥️ by Richie lema
+=========================== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;color:#fff;min-height:100vh;overflow-x:hidden;position:relative;background:#000}
+body::before{content:"";position:fixed;inset:0;background:url("background.jpg") center/cover no-repeat;filter:blur(1px);transform:scale(1.1);z-index:-2;animation:zoomBackground 20s ease-in-out infinite alternate}
+body::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:-1}
+@keyframes zoomBackground{from{transform:scale(1.05)}to{transform:scale(1.2)}}
+header{text-align:center;padding:50px 20px}
+header h1{font-size:2.4rem;margin-bottom:10px}
+header p{font-size:1.1rem}
+nav{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;padding:15px;background:rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+nav a{color:#fff;text-decoration:none;padding:12px 22px;border-radius:30px;background:#1e88e5;transition:.3s}
+nav a:hover{background:#1565c0;transform:translateY(-3px)}
+main{width:90%;max-width:1100px;margin:auto}
+.hero{text-align:center;padding:70px 20px}
+.hero h2{font-size:2rem;margin-bottom:20px}
+.hero p{max-width:700px;margin:auto;line-height:1.8}
+.buttons{margin-top:35px}
+.btn{display:inline-block;margin:10px;padding:15px 28px;background:#ff9800;color:#fff;text-decoration:none;border-radius:40px;font-weight:bold;transition:.3s}
+.btn:hover{background:#f57c00;transform:scale(1.05)}
+.gallery-section{padding:40px 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.memory-card{background:rgba(255,255,255,.08);border-radius:15px;overflow:hidden;backdrop-filter:blur(6px);transition:.3s}
+.memory-card:hover{transform:translateY(-8px)}
+.memory-card img,.memory-card video{width:100%;height:250px;object-fit:cover}
+.memory-card h3{padding:12px}
+.memory-card p{padding:0 12px 15px}
+form{max-width:600px;margin:40px auto;background:rgba(255,255,255,.08);padding:25px;border-radius:15px;backdrop-filter:blur(8px)}
+input,select,textarea{width:100%;padding:14px;margin-bottom:15px;border:none;border-radius:10px}
+button{width:100%;padding:15px;border:none;border-radius:10px;background:#1e88e5;color:#fff;font-size:17px;cursor:pointer}
+button:hover{background:#1565c0}
+footer{text-align:center;padding:30px 15px;margin-top:60px;background:rgba(255,255,255,.08)}
+footer p{margin:6px 0}
 @media(max-width:768px){
-
-nav{
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-h1{
-    font-size:36px;
-    padding:0 15px;
-}
-
-h2{
-    font-size:26px;
-}
-
-p{
-    font-size:16px;
-    padding:0 15px;
-}
-
-button{
-    width:85%;
-}
-
-section{
-    width:95%;
-}
-
-.gallery{
-    grid-template-columns:1fr;
-}
-
+header h1{font-size:1.8rem}
+.hero h2{font-size:1.6rem}
+.btn{display:block;width:90%;margin:12px auto}
 }
